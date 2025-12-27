@@ -1,4 +1,14 @@
-    //   metric converter function
+  //  nav bar
+  function toggleMenu() {
+  let nav = document.getElementById("nav-links");
+  if (nav.style.display === "flex") {
+    nav.style.display = "none";
+  } else {
+    nav.style.display = "flex";
+  }
+}
+   
+   //   metric converter function
       
       function convertLength() {
             let v = Number(lenValue.value);

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Metric Conversion Project</title>
+    <link rel="stylesheet" href="Css/style.css">
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+
+
+            <img src="images/logo.png" class="logo" alt="Logo">
+
+            <h2 class="abcd">METRIC CONVERSION</h2>
+
+
+
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#converstion chart">Conversion Chart</a></li>
+            <li><a href="#length">Length</a></li>
+            <li><a href="#area">Area</a></li>
+            <li><a href="#volume">Volume</a></li>
+            <li><a href="#mass">Mass</a></li>
+            <li><a href="#Temperature">Temperature</a></li>
+            <li><a href="#history">History</a></li>
+            <li><a href="#faqs">FAQs</a></li>
+        </ul>
+    </nav>
+
+    <!-- Conversion Chart -->
+     <div class="main-container">
+    <section id="chart" class="box">
+        <h2>Metric Conversion Chart</h2>
+        <table>
+            <tr>
+                <th>Type</th>
+                <th>From</th>
+                <th>To</th>
+                <th>Multiply By</th>
+            </tr>
+            <tr>
+                <td>Length</td>
+                <td>Inches</td>
+                <td>Millimeters</td>
+                <td>25.4</td>
+            </tr>
+            <tr>
+                <td>Length</td>
+                <td>Feet</td>
+                <td>Meters</td>
+                <td>0.3048</td>
+            </tr>
+            <tr>
+                <td>Length</td>
+                <td>Miles</td>
+                <td>Kilometers</td>
+                <td>1.609</td>
+            </tr>
+            <tr>
+                <td>Area</td>
+                <td>Acres</td>
+                <td>Hectares</td>
+                <td>0.4047</td>
+            </tr>
+            <tr>
+                <td>Volume</td>
+                <td>Gallons</td>
+                <td>Liters</td>
+                <td>3.785</td>
+            </tr>
+            <tr>
+                <td>Mass</td>
+                <td>Pounds</td>
+                <td>Kilograms</td>
+                <td>0.4536</td>
+            </tr>
+        </table>
+    </section>
+    
+
+        <!-- Length Conversion -->
+        <section class="box">
+            <h2>Length Conversion</h2>
+            <input type="number" id="lenValue" placeholder="Enter value">
+            <select id="lenType">
+                <option value="inch">Inches to Millimeters</option>
+                <option value="feet">Feet to Meters</option>
+                <option value="mile">Miles to Kilometers</option>
+            </select>
+            <button onclick="convertLength()">Convert</button>
+            <p id="lenResult"></p>
+        </section>
+
+        <!-- Area Conversion -->
+        <section class="box">
+            <h2>Area Conversion</h2>
+            <input type="number" id="areaValue" placeholder="Enter value">
+            <select id="areaType">
+                <option value="sqft">Square Feet to Square Meters</option>
+                <option value="acre">Acres to Hectares</option>
+            </select>
+            <button onclick="convertArea()">Convert</button>
+            <p id="areaResult"></p>
+        </section>
+
+        <!-- Volume Conversion -->
+        <section class="box">
+            <h2>Volume Conversion</h2>
+            <input type="number" id="volValue" placeholder="Enter value">
+            <select id="volType">
+                <option value="gallon">Gallons to Liters</option>
+                <option value="cubic">Cubic Feet to Cubic Meters</option>
+            </select>
+            <button onclick="convertVolume()">Convert</button>
+            <p id="volResult"></p>
+        </section>
+
+        <!-- Mass Conversion -->
+        <section class="box">
+            <h2>Mass Conversion</h2>
+            <input type="number" id="massValue" placeholder="Enter value">
+            <select id="massType">
+                <option value="pound">Pounds to Kilograms</option>
+                <option value="ounce">Ounces to Grams</option>
+            </select>
+            <button onclick="convertMass()">Convert</button>
+            <p id="massResult"></p>
+        </section>
+
+        <!-- Temperature Conversion -->
+        <section class="box">
+            <h2>Temperature Conversion</h2>
+            <input type="number" id="tempValue" placeholder="Enter value">
+            <select id="tempType">
+                <option value="f2c">Fahrenheit to Celsius</option>
+                <option value="c2f">Celsius to Fahrenheit</option>
+            </select>
+            <button onclick="convertTemp()">Convert</button>
+            <p id="tempResult"></p>
+        </section>
+
+    
+
+
+    <!-- History -->
+    <section id="history" class="box">
+        <h2>History of Measurement Units</h2>
+        <p>The history of measurement units reflects how humans learned to understand and organize the world around
+            them. In early times, people used simple and familiar references such as hands, feet, steps, and stones to
+            measure length and weight. These methods were practical but not very accurate because they differed from
+            person to person. As human societies grew and trade expanded, the need for fair and consistent measurements
+            became more important.
+
+            Ancient civilizations like the Egyptians and Romans developed more reliable measurement systems. The
+            Egyptians used the cubit to build large structures, while the Romans introduced units such as the mile and
+            pound, which influenced later measurement systems. However, measurements still varied widely between
+            regions.
+
+            To solve these problems, the metric system was introduced in the 18th century. It was designed to be simple,
+            logical, and based on decimal units. Today, the International System of Units (SI) is used worldwide,
+            helping science, technology, and trade work smoothly and accurately.</p>
+    </section>
+
+    <!-- FAQs -->
+    <section id="faq" class="box">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-box">
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    How do I enter numbers in Scientific Notation?
+                    <span class="arrow">⌄</span>
+                </div>
+                <div class="faq-answer">
+                    Scientific notation is used to represent very large or very small numbers using powers of 10.
+                    Example: 1,000,000 = 1 × 10⁶ and 0.00045 = 4.5 × 10⁻⁴.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    What is a knot? What is a nautical mile?
+                    <span class="arrow">⌄</span>
+                </div>
+                <div class="faq-answer">
+                    A knot is a unit of speed equal to one nautical mile per hour.
+                    A nautical mile is equal to 1.852 kilometers or about 1.15 miles.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    How do I convert inches of rain to millimeters?
+                    <span class="arrow">⌄</span>
+                </div>
+                <div class="faq-answer">
+                    To convert inches of rain to millimeters, multiply by 25.4.
+                    To convert millimeters to inches, divide by 25.4.
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    What is the difference between long ton, short ton, and metric ton?
+                    <span class="arrow">⌄</span>
+                </div>
+                <div class="faq-answer">
+                    Short ton (US) = 2,000 pounds.
+                    Long ton (UK) = 2,240 pounds.
+                    Metric ton = 1,000 kilograms (2,204.62 pounds)
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    Are Celsius and Fahrenheit the same?
+                    <span class="arrow">⌄</span>
+                </div>
+                <div class="faq-answer">
+                    No, they are different temperature scales.
+                    Water freezes at 0°C (32°F) and boils at 100°C (212°F)
+                </div>
+            </div>
+
+        </div>
+    </section>
+    </div>
+     </div>
+
+    <!-- footer Section -->
+    <!-- Font Awesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+
+        <footer class="footer">
+            <div class="footer-container">
+
+                <!-- Social Media Links -->
+                <div class="footer-box">
+                    <h3>Follow Us</h3>
+
+                    <div class="iconssss">
+                        <a href="#" class="social whatsapp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+
+                        <a href="#" class="social facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+
+                        <a href="#" class="social instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+
+
+                <!-- Contact Section -->
+                <div class="footer-box">
+                    <h3>Contact Us</h3>
+                    <p><i class="fas fa-phone"></i> +92 300 1234567</p>
+                    <p><i class="fas fa-envelope"></i> info@example.com</p>
+                    <p><i class="fas fa-location-dot"></i> Karachi, Pakistan</p>
+                </div>
+
+                <!-- Copyright Section -->
+                <div class="footer-box">
+                    <h3>Copyright</h3>
+                    <p>© 2025 Your Website Name</p>
+                    <p>All Rights Reserved.</p>
+                </div>
+
+            </div>
+        </footer>
+
+
+        <script src="JavaScript/Script.js"></script>
+    </body>
+
+</html>
